@@ -1,5 +1,6 @@
 import './index.css'
-
+import { H2Title } from '../h2Title'
+import { TextContainer } from '../TextContainer'
 export const avisC = ({props}) => {
     
     return (
