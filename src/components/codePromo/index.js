@@ -1,8 +1,11 @@
 import './index.css'
+import {Button} from "../Button";
+import {H3Title} from "../h3Title";
+import {TextForm} from "../TextForm";
 export const CodeP = () => {
     return <div>
-        <h3>Code Promo</h3>
-        <input type="text" placeholder="Saisissez votre code promo..." width="4"/>
-        <button type="submit" class="button1">Appliquer le code promo</button>
+        <H3Title content= "Code Promo"/>
+        <input type="text" placeholder="Saisissez votre code promo..." class="text" />
+        <Button value= "Appliquer le code promo"/>
     </div>
 } 
