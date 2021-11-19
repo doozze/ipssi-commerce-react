@@ -1,6 +1,7 @@
 import './index.css';
-export const Commande= ({productName, price, urlImage, qte, totale}) => {
+export const LigneCommande= ({productName, price, urlImage, qte, totale, statut}) => {
     totale= price*qte;
+    
     return (
         <div> 
             <table>
@@ -10,6 +11,7 @@ export const Commande= ({productName, price, urlImage, qte, totale}) => {
                     <th>Prix</th>
                     <th>Qté</th>
                     <th>Total</th>
+                    <th>statut</th>
                 </tr>
                 <tr>
                     <td>{urlImage}</td>
@@ -17,6 +19,7 @@ export const Commande= ({productName, price, urlImage, qte, totale}) => {
                     <td>{price}</td>
                     <td>{qte}</td>
                     <td>{totale}</td>
+                    <td>{statut}</td>
                 </tr>
             </table>  
         </div>

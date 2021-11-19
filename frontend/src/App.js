@@ -26,7 +26,10 @@ function App() {
           }/>
 
           <Route path='/code' element={
-            <CodeP />
+            <Commande />
+          }/>
+          <Route path='/co' element={
+            <LigneCommande/>
           }/>
         </Routes>
       </Router>
