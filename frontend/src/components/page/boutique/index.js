@@ -1,6 +1,6 @@
 import './index.css'
-import { H1Title } from '../h1Title'
 import { VignetteProduct } from '../../VignetteProduct'
+import {H1Title} from "../../h1Title";
 
 export const pageBoutique = ({ productList }) => {
 
