@@ -10,7 +10,8 @@ const APIContextProvider = ({children})=> {
 
     const getProducts = async () => {
         try {
-            const {data} = await axios('/produits');
+            const {data} = await axios('/produits').data;
+            console.log( "TEST" +data)
             setProducts(data);
         } catch (error) {
             console.log(error.message);
