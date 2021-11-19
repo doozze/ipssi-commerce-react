@@ -1,6 +1,6 @@
 import './index.css'
 
-export const Button = ({ ...props }) => {
+export const Button = (props) => {
     
-    return <input type="button" {...props} />
+    return <input type="button" value={props.value} />
 }
