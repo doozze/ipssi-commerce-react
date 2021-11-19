@@ -1,6 +1,6 @@
 import './index.css'
 
-export const H3Title = ({ content }) => {
+export const PriceModule = ({ price }) => {
     
-    return <h3 className="titreH3">{content}</h3>
+    return (<p className="price">{price}€</p>)
 }
