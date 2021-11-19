@@ -1,6 +1,15 @@
-import './index.css'
+import './index.css';
+import {PriceModule} from '../PriceModule';
+import {H2Title} from '../h2Title';
+import {H3Title} from '../h3Title';
 
-export const H3Title = ({ content }) => {
+export const ShortInfosModule = ({ productName, vendor, price }) => {
     
-    return <h3 className="titreH3">{content}</h3>
+    return (
+        <div className="shortInfosModule">
+            <H2Title content={productName}/>
+            <H3Title content={vendor}/>
+            <PriceModule price={price}/>
+        </div>
+    )
 }
