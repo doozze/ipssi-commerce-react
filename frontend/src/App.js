@@ -24,13 +24,6 @@ function App() {
           <Route path='/boutique' element={
             <pageBoutique />
           }/>
-
-          <Route path='/code' element={
-            <Commande />
-          }/>
-          <Route path='/co' element={
-            <LigneCommande/>
-          }/>
         </Routes>
       </Router>
   );
