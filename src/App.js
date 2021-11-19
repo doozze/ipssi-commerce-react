@@ -7,6 +7,7 @@ import {
 import { Home } from './components/Home';
 import { Counter } from './components/Counter';
 import { CodeP } from "./components/codePromo";
+import { pageBoutique } from "./components/page/boutique"
 import './App.css';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
 
           <Route path='/counter' element={
             <Counter />
+          }/>
+          <Route path='/boutique' element={
+            <pageBoutique />
           }/>
 
           <Route path='/code' element={
