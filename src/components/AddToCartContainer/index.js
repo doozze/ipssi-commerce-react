@@ -7,7 +7,7 @@ export const AddToCartContainer = (props) => {
         <div className ="AddToCartContainer">
             <input type="number" />
             <PriceModule price={props.price} />
-            <Button value={props.valueButton}/>
+            <Button value="Ajouter au panier"/>
         </div>
     )
     
