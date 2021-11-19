@@ -7,25 +7,28 @@ import {
 import { Home } from './components/Home';
 import { Counter } from './components/Counter';
 import { CodeP } from "./components/codePromo";
-import { pageBoutique } from "./components/page/boutique"
+import { PageBoutique } from "./components/page/boutique"
 import './App.css';
+import {APIContextProvider} from "./contexts/APIContext";
 
 function App() {
   return (
-      <Router>
-        <Routes>
-          <Route path='/' element={
-            <Home />
-          }/>
+      <APIContextProvider>
+        <Router>
+          <Routes>
+            <Route path='/' element={
+              <Home />
+            }/>
 
-          <Route path='/counter' element={
-            <Counter />
-          }/>
-          <Route path='/boutique' element={
-            <pageBoutique />
-          }/>
-        </Routes>
-      </Router>
+            <Route path='/counter' element={
+              <Counter />
+            }/>
+            <Route path='/boutique' element={
+              <pageBoutique />
+            }/>
+          </Routes>
+        </Router>
+      </APIContextProvider>
   );
 }
 

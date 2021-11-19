@@ -1,11 +1,13 @@
 import './index.css'
 import { VignetteProduct } from '../../VignetteProduct'
 import {H1Title} from "../../h1Title";
+import {useAPIContext} from "../../../contexts/APIContext";
 
-export const pageBoutique = ({ productList }) => {
+export const PageBoutique = ({ productList }) => {
 
     let vignettes
-    let products = productList
+    //let products = productList
+    const {products, setProducts} = useAPIContext();
     products.foreach( product =>  vignettes += <VignetteProduct props={product}/> )
 
     return(
