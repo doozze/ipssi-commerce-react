@@ -7,7 +7,7 @@ import { Button } from '../Button'
 
 export const ConnexionForm = ({ props }) => {
     let checkbox;
-    if (props.typeForm == "connexion"){
+    if (props.typeForm === "connexion"){
         checkbox = ""
     }else{
         checkbox = <div><input type="checkbox" id={props.checkBoxId}/><label for={props.checkBox.Id} value={props.checkBox.value}/></div>
