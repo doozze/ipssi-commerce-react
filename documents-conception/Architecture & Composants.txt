@@ -1,0 +1,199 @@
+//////// List Components ////////
+
+h1Title
+h2Title
+h3Title
+vignetteProduct
+shortInfosProduct
+priceModule
+sectionProduct
+productContainer
+productInfosContainer
+textContainer
+button
+addToCartContainer
+avisContainer
+ligneCommande
+codePromo
+inputForm
+clientInfos
+dataClient
+commande
+ligneCommande
+infosBoutique
+textForm
+listCodePromo
+ligneCodePromo
+creerCodePromo
+logSubscribe
+subscribe
+paymentBox
+paymentModule
+imageProduct
+navigation
+
+
+//////// List Page ///////////
+
+Boutique
+Fiche Produit
+Paiement
+Mon compte
+Connexion
+Panier
+CGV
+
+//////// Page Boutique /////////
+
+page comp sectionBoutique
+
+    comp h1Title
+    comp vignetteProduct
+
+        comp imageProduct
+        comp shortInfosProduct
+            comp h2Title
+            comp h3Title
+            comp priceModule
+
+//////// Page Produit /////////
+
+page comp singleProduct
+    
+    comp sectionProduct
+
+        comp h1Title
+        comp productContainer
+
+            -> imageProduct
+            comp productInfosContainer
+
+                comp textContainer
+                    comp h2Title
+                    -> textDescription
+                    
+                comp vendorInfos
+                    comp textContainer
+                    comp button
+
+                comp addToCartContainer
+                    -> dropDown
+                    comp priceModule
+                    comp button
+
+    comp avisSection
+
+        comp h2Title
+        comp avisContainer
+
+            comp h3Title
+            -> textDescription
+
+//////// Navigation /////////
+
+comp navigation
+
+    comp logoImage
+    comp nav
+        -> navItem
+
+//////// Page texte /////////
+
+page comp pageContent
+
+    comp h1Title
+    comp textContainer
+
+//////// Page Panier /////////
+
+page sectionPanier
+    comp h1Title
+    comp ligneCommande
+        -> urlImage
+        -> nomProduit
+        -> price
+        -> quantite
+        -> totalPriceLine
+    comp button
+
+    comp codePromo
+        comp h2Title
+        comp inputForm
+        comp button
+
+    comp h3Title
+    comp button
+
+//////// Page Mon compte /////////
+
+Page comp pageCompte
+    comp h1Title
+    
+    comp clientInfos
+        comp h2Title
+        comp dataClient
+            comp h3Title 
+            comp inputForm
+            comp inputForm
+            comp inputForm
+            comp inputForm
+            comp inputForm
+            comp inputForm
+            comp labelCheckBox (devenir vendeur)
+            comp button (modifier)
+
+    comp commande (commande en cours client)
+        comp h3Title
+        comp ligneCommande
+            + Statut
+        comp button
+        comp button if vendor
+
+    comp infosBoutique
+        comp h3Title
+        comp inputForm
+        comp textForm
+            -> label
+            -> textArea
+        comp button
+
+    comp listCodePromo (vendor)
+        comp h2Title
+        comp h3Title
+        comp ligneCodePromo
+            -> NomCodePromo
+            -> Reduction
+        comp button (editer)
+        comp button (supprimer)
+
+    comp creerCodePromo
+        comp h2Title
+        comp inputForm
+        comp inputForm
+        comp button
+
+//////// Page Connexion /////////
+
+page comp connexion
+    comp logSubscribe
+        comp h2Title (login)
+        comp inputForm
+        comp inputForm
+        comp button
+
+    comp subscribe
+        comp logSubscribe
+        -> labelCheckBox (devenir vendeur)
+
+//////// Page paiement /////////
+page comp paiement
+    comp h1Title
+    comp dataClient
+    comp paymentBox
+        comp h2Title
+        comp paymentModule
+            -> ongletPaymentServices
+            comp h3Title (montant payment)
+            comp button (payment)
+
+////////////////////////////////////////////////////////////
