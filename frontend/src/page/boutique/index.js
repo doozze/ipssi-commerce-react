@@ -8,13 +8,14 @@ export const PageBoutique = ({ productList }) => {
     let vignettes
     //let products = productList
     const {products, setProducts} = useAPIContext();
-    products.foreach( product =>  vignettes += <VignetteProduct props={product}/> )
+    //products.map( product => { vignettes += <VignetteProduct urlProduct="" urlImage={product.photo} productName={product.nom_produit} vendor={product.vendeur} price={product.prix}/> })
+
 
     return(
-        <section className="pageBoutique">
+        <section className="PageBoutique">
             <H1Title content={productList.pageTitle}/>
             <div className="vignetteContainer">
-                {vignettes}
+                {products}
             </div>
         </section>
         

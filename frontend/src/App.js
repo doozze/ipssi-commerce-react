@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={
-              <Home />
+              <PageBoutique productList="Boutique"/>
             }/>
 
             <Route path='/counter' element={
