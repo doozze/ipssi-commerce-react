@@ -35,11 +35,26 @@ module.exports = {
     genericPut : async(sql, bodyWithId, res, next) => { // récupérer id dans put
         let connexion = await pool.getConnection();
         try {
-            console.log(bodyWithId);
             const result = await connexion.query(sql,bodyWithId);
             return res.status(200).json({success: result});
         }
         catch (error){    
+            return res.status(400).json({error: error.message});
+            next();
+        }
+        finally {
+            if(connexion)
+                connexion.end();
+        }
+    },
+
+    genericSelect: async(sql, res, next) => { // récupérer id dans put
+        let connexion = await pool.getConnection();
+        try {
+            const result = await connexion.query(sql);
+            return res.status(200).json({success: result});
+        }
+        catch (error){
             return res.status(400).json({error: error.message});
             next();
         }

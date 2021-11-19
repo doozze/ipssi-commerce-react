@@ -1,6 +1,6 @@
 const pool = require('../config/database');
 
-const { genericPost, genericGetDelete, genericPut } = require('./genericController');
+const { genericPost, genericGetDelete, genericPut, genericSelect} = require('./genericController');
 
 
 module.exports = {
@@ -11,10 +11,16 @@ module.exports = {
     },
 
     readProduit: async (req, res, next) => {
-       const id = req.params.id; 
+       const id = req.params.id;
        const sql = `Call getProduit(?)`;
        genericGetDelete(sql, id, res, next);
 
+    },
+
+    readAllProduits: async (req, res, next) => {
+        const sql = `Call selectProduits()`;
+        genericSelect(sql, res, next)
+        console.log(res);
     },
 
     updateProduit : async (req, res, next) => {
