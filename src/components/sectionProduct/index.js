@@ -1,6 +1,17 @@
 import './index.css'
+import { ImageProduct } from '../ImageProduct'
+import { ProductInfosContainer } from '../productInfosContainer'
+import { H1Title } from '../h1Title'
 
-export const H3Title = ({ content }) => {
+export const SectionProduct = ({ product, vendor }) => {
     
-    return <h3 className="titreH3">{content}</h3>
+    return (
+        <section className="sectionProduct">
+            <H1Title content={product.name}/>
+            <div className="productBody">
+            <ImageProduct src={product.imageUrl} alt={product.name}/>
+            <ProductInfosContainer product={product.price, product.title, product.textValue} vendor={vendor.title, vendor.textValue}/>
+            </div>
+        </section>
+    )
 }
