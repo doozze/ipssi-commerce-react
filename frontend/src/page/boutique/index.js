@@ -1,7 +1,7 @@
 import './index.css'
-import { VignetteProduct } from '../../VignetteProduct'
-import {H1Title} from "../../h1Title";
-import {useAPIContext} from "../../../contexts/APIContext";
+import { VignetteProduct } from '../../components/VignetteProduct'
+import {H1Title} from "../../components/h1Title";
+import {useAPIContext} from "../../contexts/APIContext";
 
 export const PageBoutique = ({ productList }) => {
 

@@ -7,7 +7,7 @@ import {
 import { Home } from './components/Home';
 import { Counter } from './components/Counter';
 import { CodeP } from "./components/codePromo";
-import { PageBoutique } from "./components/page/boutique"
+import { PageBoutique } from "./page/boutique"
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";
 

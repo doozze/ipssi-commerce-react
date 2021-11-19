@@ -1,6 +1,6 @@
 import './index.css'
 import { H1Title } from '../h1Title'
-import { ConnexionForm } from '../../LogSubscribe'
+import { ConnexionForm } from '../../components/LogSubscribe'
 
 export const pageConnexion = ({ props, connexion, inscription }) => {
 
