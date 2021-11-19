@@ -7,7 +7,7 @@ export const TextInfos = (props) => {
     return (
         <div className="textInfos">
             <H2Title content={props.title}/>
-            <TextContainer>{props.textValue}</TextContainer>
+            <TextContainer textValue={props.textValue}/>
         </div>
     )
 }
