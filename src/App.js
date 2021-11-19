@@ -6,7 +6,8 @@ import {
 
 import { Home } from './components/Home';
 import { Counter } from './components/Counter';
-import { CodeP } from "./components/codePromo";
+import { Commande } from "./components/commande";
+import { LigneCommande } from "./components/ligneCommande";
 import './App.css';
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
           }/>
 
           <Route path='/code' element={
-            <CodeP />
+            <Commande />
+          }/>
+          <Route path='/co' element={
+            <LigneCommande/>
           }/>
         </Routes>
       </Router>
