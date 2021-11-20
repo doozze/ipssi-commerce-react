@@ -1,48 +1,59 @@
 import './index.css'
 import { H1Title } from '../../components/h1Title'
-import { ConnexionForm } from '../../components/LogSubscribe'
+import { ConnexionForm } from '../../components/ConnexionForm'
 
 export const PageConnexion = ({ pageTitle }) => {
 
-    const formulaire = {
+    const form = {
         connexion: {
-            typeForm: "connexion",
+            typeForm: "Se Connecter",
+            buttonId: "ConnexionButton",
             login: {
-                inputId: "login",
-                labelId: "login",
+                inputId: "loginC",
+                labelId: "lblLoginC",
                 labelValue: "mail",
                 type: "text",
             },
             password: {
-                inputId: "password",
-                labelId: "password",
+                inputId: "passwordC",
+                labelId: "lblPasswordC",
                 labelValue: "Mot de passe",
                 type: "password",
             },
         },
         inscription: {
-            typeForm: "inscription",
+            typeForm: "S'inscrire",
+            buttonId: "InscriptionButton",
             login: {
-                inputId: "login",
-                labelId: "login",
+                inputId: "loginI",
+                labelId: "lblLoginI",
                 labelValue: "mail",
                 type: "text",
             },
             password: {
-                inputId: "password",
-                labelId: "password",
+                inputId: "passwordI",
+                labelId: "lblPasswordI",
                 labelValue: "Mot de passe",
                 type: "password",
             },
         }
     }
-    console.log(formulaire)
+
+    const handleConnexionClick = event => {
+
+    }
+
+    const handleInscriptionClick = () => {
+
+    }
+
+    // TODO useState login/password
     return(
         <section className="pageConnexion">
-            <H1Title content={pageTitle}/>
+            <H1Title content="Page de Connexion/Inscription"/>
             <div className="formContainer">
-                <ConnexionForm props={formulaire.connexion}/>
-                <ConnexionForm props={formulaire.inscription}/>
+                <ConnexionForm id="ConnexionForm" couple={form.connexion} sectionTitle="Connexion" typeForm={form.connexion.typeForm}/>
+                <ConnexionForm id="InscriptionForm" couple={form.inscription} sectionTitle="Inscription" typeForm={form.inscription.typeForm}/>
             </div>
         </section>
         

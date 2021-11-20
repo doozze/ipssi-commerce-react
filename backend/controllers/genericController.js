@@ -3,9 +3,10 @@ const pool = require('../config/database');
 module.exports = {
     genericPost : async(sql, body, res, next) => { // recupérer id dans les posts
         let connexion = await pool.getConnection();
+        console.log("aaaaaaa");
         try {
             const result = await connexion.query(sql,body);
-            return res.status(201).json({success: result});
+            return res.status(200).json({success: result});
         }
         catch (error){    
             return res.status(400).json({error: error.message});
@@ -52,7 +53,6 @@ module.exports = {
         let connexion = await pool.getConnection();
         try {
             const result = await connexion.query(sql);
-            console.log(result);
             return res.status(200).json({success: result});
         }
         catch (error){

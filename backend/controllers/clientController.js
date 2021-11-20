@@ -9,7 +9,6 @@ module.exports = {
         const {nom, prenom, mail, id_addresse, tel, password} = req.body;
         const sql =`Call insertClient(?,?,?,?,?,?)`;
         genericPost(sql, [nom, prenom, mail, id_addresse, tel, password], res, next);
-        // change sens fk constraint client/adresse
     },
 
     readClient : async(req,res,next) => {
@@ -30,5 +29,12 @@ module.exports = {
         const id = req.params.id;
         genericGetDelete(sql, id, res, next);
         
+    },
+
+    clientConnexion : async(req, res, next) => {
+        const sql = 'Call connexionClient(?,?)';
+        const {mail, password} = req.body;
+        console.log("aaaaaaaaa");
+        genericPost(sql, [mail, password], res, next);
     }
 }
