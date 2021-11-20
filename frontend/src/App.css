@@ -1,4 +1,22 @@
 
+body,h1,h2,h3,p,ul{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 body{
-    test : test;
+    margin: 1em;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+form label,form input, form textarea{
+    display: block;
+    width: calc(100% - 1em);
+    padding: 0.5em;
+}
+form label{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 0.5em 0 0 0;
 }
