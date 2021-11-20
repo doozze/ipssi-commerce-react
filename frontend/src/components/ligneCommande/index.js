@@ -1,27 +1,29 @@
 import './index.css';
-export const LigneCommande= ({productName, price, urlImage, qte, totale, statut}) => {
-    totale= price*qte;
-    
+import { ImageProduct } from '../ImageProduct';
+import { Button } from '../Button'
+
+export const LigneCommande= ({commande}) => {
+
+    let totalLine= commande.price * commande.qte;
+    let button;
+    let g=false
+    if (g){
+       button = < Button value ="Annuler la commande"/>
+    }else{
+       button= <div> < Button value ="Editer"/> < Button value ="Réclamer"/></div>;
+    }
     return (
-        <div> 
-            <table>
+
                 <tr>
-                    <th>Image</th>
-                    <th>Nom du produit</th>
-                    <th>Prix</th>
-                    <th>Qté</th>
-                    <th>Total</th>
-                    <th>statut</th>
+                    <td><ImageProduct src={commande.UrlImage} alt={commande.productName} /></td>
+                    <td>{commande.productName}</td>
+                    <td>{commande.price}</td>
+                    <td>{commande.qte}</td>
+                    <td>{totalLine}</td>
+                    <td>{commande.statut}</td>
+                    <td>{button}</td>
+
                 </tr>
-                <tr>
-                    <td>{urlImage}</td>
-                    <td>{productName}</td>
-                    <td>{price}</td>
-                    <td>{qte}</td>
-                    <td>{totale}</td>
-                    <td>{statut}</td>
-                </tr>
-            </table>  
-        </div>
+
     )
 }
