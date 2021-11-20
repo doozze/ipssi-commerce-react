@@ -33,7 +33,7 @@ function App() {
                 </footer>
               </div>
             }/>
-            <Route path='/' element={
+            <Route path='/connexion' element={
               <div className="page">
                 <header>
                   <Navigation/>
@@ -77,7 +77,8 @@ function App() {
                 </footer>
               </div>
             }/>
-             <Route path='/cguv' element={
+
+            <Route path='/cguv' element={
               <div className="page">
                 <header>
                   <Navigation/>
@@ -97,3 +98,4 @@ function App() {
 }
 
 export default App;
+
