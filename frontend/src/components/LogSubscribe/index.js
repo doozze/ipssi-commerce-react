@@ -5,7 +5,7 @@ import { Button } from '../Button'
 
 // Ajouter la checkbox
 
-export const ConnexionForm = ({ props }) => {
+export const ConnexionForm = (props) => {
     let checkbox;
     if (props.typeForm === "connexion"){
         checkbox = ""
