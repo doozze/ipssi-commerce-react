@@ -53,15 +53,15 @@ export const DataClientForm = ({infosTitle}) => {
 
             <form className="infosClient">
                 <div>
-                    <InputForm props={ adresseForm.nom }/>
-                    <InputForm props={ adresseForm.prenom }/>
-                    <InputForm props={ adresseForm.numeroVoie }/>
-                    <InputForm props={ adresseForm.voie }/>
-                    <InputForm props={ adresseForm.ville }/>
-                    <InputForm props={ adresseForm.codePostal }/>
+                    <InputForm inputId={adresseForm.nom.inputId} labelId={adresseForm.nom.labelId} labelValue={adresseForm.nom.labelValue} type={adresseForm.nom.type}/>
+                    <InputForm inputId={adresseForm.prenom.inputId} labelId={adresseForm.prenom.labelId} labelValue={adresseForm.prenom.labelValue} type={adresseForm.prenom.type}/>
+                    <InputForm inputId={adresseForm.voie.inputId} labelId={adresseForm.voie.labelId} labelValue={adresseForm.voie.labelValue} type={adresseForm.voie.type}/>
+                    <InputForm inputId={adresseForm.voie.inputId} labelId={adresseForm.voie.labelId} labelValue={adresseForm.voie.labelValue} type={adresseForm.voie.type}/>
+                    <InputForm inputId={adresseForm.ville.inputId} labelId={adresseForm.ville.labelId} labelValue={adresseForm.ville.labelValue} type={adresseForm.ville.type}/>
+                    <InputForm inputId={adresseForm.codePostal.inputId} labelId={adresseForm.codePostal.labelId} labelValue={adresseForm.codePostal.labelValue} type={adresseForm.codePostal.type}/>
                     <input type="checkbox" id="beVendor"/><label for="beVendor">Devenir Vendeur</label>
                 </div>
-                
+
                 <Button value="modifier"/>
                 
             </form>
