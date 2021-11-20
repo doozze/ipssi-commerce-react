@@ -1,12 +1,23 @@
 import './index.css'
-import { H1Title } from '../h1Title'
 import { SectionProduct } from '../../components/sectionProduct'
 
-export const PageProduit = ({ product, vendor }) => {
+export const PageProduit = () => {
 
+    const singleProduct = {
+        produit: {
+            imageUrl: "www.test.fr",
+            name: "Name Test",
+            price: "12",
+            textValue: "Lorem description produit ipsum dolor sic amet",
+        },
+        vendor: {
+            title: "boutique name",
+            textValue: "Lorem description boutique",
+        }
+    }
     return(
         <section className="pageProduct">
-            <SectionProduct product={product}/>
+            <SectionProduct singleProduct={singleProduct}/>
             
 
         </section>

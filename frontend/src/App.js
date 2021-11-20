@@ -70,7 +70,7 @@ function App() {
                 <header>
                   <Navigation/>
                 </header>
-                <PageProduit pageTitle="produit" />
+                <PageProduit />
                 <footer>
                   <Navigation/>
                 </footer>

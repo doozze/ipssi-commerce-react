@@ -2,12 +2,12 @@ import { H2Title } from '../h2Title'
 import { TextContainer } from '../TextContainer'
 import './index.css'
 
-export const TextInfos = (props) => {
-    
+export const TextInfos = ({content, textValue}) => {
+
     return (
         <div className="textInfos">
-            <H2Title content={props.title}/>
-            <TextContainer textValue={props.textValue}/>
+            <H2Title content={content}/>
+            <TextContainer textValue={textValue}/>
         </div>
     )
 }
