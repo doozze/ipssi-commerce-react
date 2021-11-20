@@ -12,6 +12,7 @@ import { PageProduit } from "./page/produit";
 import { PageConnexion } from "./page/connexion"
 import { PageCompte } from "./page/compte";
 import { PagePanier } from "./page/panier";
+import { PageCGUV } from "./page/cguv";
 import { Navigation } from "./components/Navigation";
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";
@@ -76,7 +77,17 @@ function App() {
                 </footer>
               </div>
             }/>
- 
+             <Route path='/cguv' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <PageCGUV />
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }/>
 
 
           </Routes>
