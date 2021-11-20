@@ -10,6 +10,7 @@ import { CodeP } from "./components/codePromo";
 import { PageBoutique } from "./page/boutique"
 import { PageConnexion } from "./page/connexion"
 import { PageCompte } from "./page/compte";
+import { PagePanier } from "./page/panier";
 import { Navigation } from "./components/Navigation";
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";
@@ -47,6 +48,17 @@ function App() {
                   <Navigation/>
                 </header>
                 <PageCompte pageTitle="Mon Compte" />
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }/>
+            <Route path='/panier' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <PagePanier pageTitle="Panier" />
                 <footer>
                   <Navigation/>
                 </footer>
