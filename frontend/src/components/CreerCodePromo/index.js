@@ -4,7 +4,7 @@ import {Button} from "../Button";
 import {H3Title} from "../h3Title";
 import {TextForm} from "../TextForm";
 
-export const CreerCodePromo= (props) => {
+export const CreerCodePromo= () => {
 
     return(
         <div className="CreerCodePromo">

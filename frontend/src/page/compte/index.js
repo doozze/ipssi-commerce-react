@@ -3,6 +3,8 @@ import { H1Title } from '../../components/h1Title'
 import { DataClientForm } from '../../components/DataClient'
 import { Commande } from '../../components/commande'
 import { InfosBoutique } from '../../components/InfosBoutique'
+import { ListCodePromo } from '../../components/LigneCodePromo'
+import { CreerCodePromo } from '../../components/ListCodePromo'
 
 export const PageCompte = ({ pageTitle }) => {
     const dataForm = {
@@ -36,6 +38,8 @@ export const PageCompte = ({ pageTitle }) => {
             <DataClientForm infosTitle={dataForm}/>
             <Commande commande={pendingCommande}/>
             <InfosBoutique boutique={boutique}/>
+            <ListCodePromo />
+            <CreerCodePromo />
         </section>
         
     )   
