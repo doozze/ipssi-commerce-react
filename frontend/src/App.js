@@ -8,8 +8,10 @@ import { Home } from './components/Home';
 import { Counter } from './components/Counter';
 import { CodeP } from "./components/codePromo";
 import { PageBoutique } from "./page/boutique"
+import { PageProduit } from "./page/produit";
 import { PageConnexion } from "./page/connexion"
 import { PageCompte } from "./page/compte";
+import { PagePanier } from "./page/panier";
 import { Navigation } from "./components/Navigation";
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";
@@ -47,6 +49,28 @@ function App() {
                   <Navigation/>
                 </header>
                 <PageCompte pageTitle="Mon Compte" />
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }/>
+            <Route path='/panier' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <PagePanier pageTitle="Panier" />
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }/>
+            <Route path='/produit' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <PageProduit pageTitle="produit" />
                 <footer>
                   <Navigation/>
                 </footer>
