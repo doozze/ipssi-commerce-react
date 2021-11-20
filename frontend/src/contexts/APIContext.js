@@ -24,16 +24,20 @@ const APIContextProvider = ({children})=> {
         getProducts();
     }, [])
 
-    const value = {products, setProducts}
+    const value = {products, setProducts};
 
     // connexion
     const connect = async() => {
         try {
             const {data} = await axios.post('', {});
+            // if else => setLogin
         } catch(error) {
             console.log(error.message);
         }
     }
+
+    const connexion = {login, setLogin};
+    
 
     return <APIContext.Provider value={value}>{children}</APIContext.Provider>
 }

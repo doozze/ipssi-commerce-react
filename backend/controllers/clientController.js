@@ -30,5 +30,11 @@ module.exports = {
         const id = req.params.id;
         genericGetDelete(sql, id, res, next);
         
+    },
+
+    clientConnexion : async(req, res, next) => {
+        const sql = 'Call connexionClient(?,?)';
+        const {mail, password} = req.body;
+        genericPost(sql, [mail, password], res, next);
     }
 }
