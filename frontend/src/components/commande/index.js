@@ -1,25 +1,35 @@
 import './index.css'
 import { H3Title } from '../h3Title'
 import { LigneCommande } from '../ligneCommande'
-import { Button } from '../Button'
 
-export const Commande = ({props}) => {
-    let buton;
-    let g=false
-    if (g){
-       buton = < Button value ="Annuler la commande"/>
-    }else{
-       buton= <div> < Button value ="Editer"/> < Button value ="Réclamer"/></div>;
+export const Commande = ({commande}) => {
+
+    // Requete pour toutes les lignes de commandes get object commande
+    // False values : 
+    const line = {
+        urlImage: "www.test.fr",
+        productName: "testProduct",
+        price: "12",
+        qte: 2,
+        statut: "pending",
     }
+
+    // Integrer condition if vendor & requete
+
     return (
-        <div >
-            <H3Title content="Bonjour"/>
-            <div>
-                <div class="tab"><LigneCommande /></div>
-                <div class= "annuler">
-                    {buton}
-                </div>
-            </div>
-        </div>
+        <section className="pendingCommande">
+            <H3Title content={commande.sectionName}/>
+                <table>
+                    <tr>
+                        <th>Image</th>
+                        <th>Nom du produit</th>
+                        <th>Prix</th>
+                        <th>Qté</th>
+                        <th>Total</th>
+                        <th>statut</th>
+                    </tr>
+                        <LigneCommande commande={line}/>
+                </table>  
+        </section>
     )
 }

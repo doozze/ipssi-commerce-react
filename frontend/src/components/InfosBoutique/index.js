@@ -6,7 +6,7 @@ import { Button } from '../Button'
 
 // Ajouter la checkbox
 
-export const DataClientForm = ({ boutique }) => {
+export const InfosBoutique = ({ boutique }) => {
     return (
         <section className="infosBoutique"> 
 
