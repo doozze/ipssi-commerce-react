@@ -3,14 +3,15 @@ import { ImageProduct } from '../ImageProduct'
 import { ProductInfosContainer } from '../productInfosContainer'
 import { H1Title } from '../h1Title'
 
-export const SectionProduct = ({ product, vendor }) => {
-    
+export const SectionProduct = ({ singleProduct }) => {
+    console.log(singleProduct)
+
     return (
         <section className="sectionProduct">
-            <H1Title content={product.name}/>
+            <H1Title content={singleProduct.produit.name}/>
             <div className="productBody">
-                <ImageProduct src={product.imageUrl} alt={product.name}/>
-                <ProductInfosContainer product={product.price, product.title, product.textValue} vendor={vendor.title, vendor.textValue}/>
+                <ImageProduct src={singleProduct.produit.imageUrl} alt={singleProduct.produit.name}/>
+                <ProductInfosContainer singleProduct={singleProduct}/>
             </div>
         </section>
     )
