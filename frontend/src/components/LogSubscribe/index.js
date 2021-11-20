@@ -10,7 +10,7 @@ export const ConnexionForm = ({ props }) => {
     if (props.typeForm === "connexion"){
         checkbox = ""
     }else{
-        checkbox = <div><input type="checkbox" id={props.checkBoxId}/><label for={props.checkBox.Id} value={props.checkBox.value}/></div>
+        checkbox = <div><input type="checkbox" id="beVendor"/><label for="beVendor">Devenir Vendeur</label></div>
     }
     return (
         <section className="dataClient"> 
@@ -21,7 +21,7 @@ export const ConnexionForm = ({ props }) => {
                 <InputForm props={ props.login }/>
                 <InputForm props={ props.password }/>
                 {checkbox}
-                <Button value="Connexion"/>
+                <Button value={props.typeForm}/>
                 
             </form>
             
