@@ -29,7 +29,7 @@ const APIContextProvider = ({children})=> {
     // connexion
     const connect = async() => {
         try {
-            const {data} = await axios.post('/clients/connexion', {});
+            const {data} = await axios.post('/clients/connexion', {}); // recup login/mdp
             console.log(data.success[0]);
             if(data.success[0] != null) {
                 setClient(data.success[0])
