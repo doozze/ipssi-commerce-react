@@ -1,12 +1,13 @@
 import './index.css'
 import { H1Title } from '../../components/h1Title'
-import { ConnexionForm } from '../../components/LogSubscribe'
+import { ConnexionForm } from '../../components/ConnexionForm'
 
 export const PageConnexion = ({ pageTitle }) => {
 
     const form = {
         connexion: {
             typeForm: "Se Connecter",
+            buttonId: "ConnexionButton",
             login: {
                 inputId: "loginC",
                 labelId: "lblLoginC",
@@ -22,6 +23,7 @@ export const PageConnexion = ({ pageTitle }) => {
         },
         inscription: {
             typeForm: "S'inscrire",
+            buttonId: "InscriptionButton",
             login: {
                 inputId: "loginI",
                 labelId: "lblLoginI",
@@ -36,13 +38,22 @@ export const PageConnexion = ({ pageTitle }) => {
             },
         }
     }
+
+    const handleConnexionClick = event => {
+
+    }
+
+    const handleInscriptionClick = () => {
+
+    }
+
     // TODO useState login/password
     return(
         <section className="pageConnexion">
             <H1Title content="Page de Connexion/Inscription"/>
             <div className="formContainer">
-                <ConnexionForm couple={form.connexion} sectionTitle="Connexion" typeForm={form.connexion.typeForm}/>
-                <ConnexionForm couple={form.inscription} sectionTitle="Inscription" typeForm={form.inscription.typeForm}/>
+                <ConnexionForm id="ConnexionForm" couple={form.connexion} sectionTitle="Connexion" typeForm={form.connexion.typeForm}/>
+                <ConnexionForm id="InscriptionForm" couple={form.inscription} sectionTitle="Inscription" typeForm={form.inscription.typeForm}/>
             </div>
         </section>
         

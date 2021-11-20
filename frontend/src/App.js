@@ -32,7 +32,7 @@ function App() {
                 </footer>
               </div>
             }/>
-            <Route path='/connexion' element={
+            <Route path='/' element={
               <div className="page">
                 <header>
                   <Navigation/>

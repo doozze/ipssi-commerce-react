@@ -1,11 +1,13 @@
 import './index.css'
+import {useState} from "react";
 
 export const InputForm = (props) => {
 
-    let entry;
+    const[myInput, setMyInput] = useState();
 
     const handleChange = event => {
-        //this.setState({let : event.target.value})
+        setMyInput();
+        event.preventDefault();
     }
 
     return (<div className="inputForm">

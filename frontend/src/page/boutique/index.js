@@ -6,11 +6,9 @@ import {useEffect} from "react";
 
 export const PageBoutique = ({ productList }) => {
 
-    //let products = productList
     const {products, setProducts} = useAPIContext();
-    //products.map( product => { vignettes += <VignetteProduct urlProduct="" urlImage={product.photo} productName={product.nom_produit} vendor={product.vendeur} price={product.prix}/> })
 
-    useEffect(()=> {console.log(products)},[products])
+    useEffect(()=> {},[products])
     return(
         <section className="PageBoutique">
             <H1Title content={productList}/>

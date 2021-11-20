@@ -13,7 +13,6 @@ const APIContextProvider = ({children})=> {
     const getProducts = async () => {
         try {
             const {data} = await axios.get('/produits');
-            console.log(data.success[0]);
             setProducts(data.success[0]);
         } catch (error) {
             console.log(error.message);
@@ -30,7 +29,6 @@ const APIContextProvider = ({children})=> {
     const connect = async() => {
         try {
             const {data} = await axios.post('/clients/connexion', {}); // recup login/mdp
-            console.log(data.success[0]);
             if(data.success[0] != null) {
                 setClient(data.success[0])
             } else {
@@ -44,7 +42,7 @@ const APIContextProvider = ({children})=> {
     const connexion = {client, setClient};
 
 
-    return <APIContext.Provider value={value}>{children}</APIContext.Provider>
+    return <APIContext.Provider value={{value, connexion}}>{children}</APIContext.Provider>
 }
 
 export {APIContextProvider, useAPIContext}
