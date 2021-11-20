@@ -7,6 +7,7 @@ const useAPIContext = () => useContext(APIContext);
 
 const APIContextProvider = ({children})=> {
     const[products, setProducts] = useState();
+    const[product, setProduct] = useState();
     const[client, setClient] = useState();
 
     // products
@@ -24,6 +25,17 @@ const APIContextProvider = ({children})=> {
     }, [])
 
     const value = {products, setProducts};
+
+    // 1 produit
+    const getProduct = async () => {
+        try {
+            const {data} = await axios.get('/produits/1');
+            setProduct(data.success[0]);
+            console.log(data.success[0])
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
 
     // connexion
     const connect = async() => {

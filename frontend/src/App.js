@@ -22,6 +22,17 @@ function App() {
       <APIContextProvider>
         <Router>
           <Routes>
+            <Route path='/' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <Home />
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }></Route>
             <Route path='/boutique' element={
               <div className="page">
                 <header>
