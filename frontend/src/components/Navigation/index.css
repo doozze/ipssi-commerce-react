@@ -1,0 +1,28 @@
+header nav, nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav img{
+    display: block;
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    margin: 0 1em;
+}
+nav li a{
+    text-decoration: none;
+}
+footer{
+    margin-top: 3em;
+}
+footer ul{
+    width: 80%;
+}
+footer img{
+    margin: auto;
+    display: block;
+    width: 10%;
+}
