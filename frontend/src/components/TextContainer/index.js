@@ -1,9 +1,9 @@
 import './index.css'
 
-export function TextContainer(props) {
+export function TextContainer({textValue}) {
 
     return (<div className="textContainer">
-        <p>{props.textvalue}</p>
+        <p>{textValue}</p>
     </div>)
 
 }
