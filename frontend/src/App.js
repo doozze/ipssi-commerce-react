@@ -5,14 +5,13 @@ import {
 } from "react-router-dom";
 
 import { Home } from './components/Home';
-import { Counter } from './components/Counter';
 import { CodeP } from "./components/codePromo";
-import { PageBoutique } from "./page/boutique"
-import { PageProduit } from "./page/produit";
-import { PageConnexion } from "./page/connexion"
-import { PageCompte } from "./page/compte";
-import { PagePanier } from "./page/panier";
-import { PageCGUV } from "./page/cguv";
+import { PageBoutique } from "./page/pageBoutique"
+import { PageProduit } from "./page/pageProduit";
+import { PageConnexion } from "./page/pageConnexion"
+import { PageCompte } from "./page/pageCompte";
+import { PagePanier } from "./page/pagePanier";
+import { PageCGUV } from "./page/pageCguv";
 import { Navigation } from "./components/Navigation";
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";

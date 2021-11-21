@@ -3,14 +3,17 @@ import { TextInfos } from '../TextInfos'
 import { AddToCartContainer } from '../AddToCartContainer'
 import { Button } from '../Button'
 
-export const ProductInfosContainer = ({ singleProduct }) => {
+export const ProductInfosContainer = (props) => {
+
+
+    //<TextInfos content={singleProduct.vendor.title} textValue={singleProduct.vendor.description}/>
+
 
     return (
         <div className="productInfosContainer">
-            <TextInfos content={singleProduct.produit.price} textValue={singleProduct.produit.textValue}/>
-            <TextInfos content={singleProduct.vendor.title} textValue={singleProduct.vendor.textValue}/>
+            <TextInfos content={props.prix} textValue={props.description}/>
             <Button value="Contacter le vendeur"/>
-            <AddToCartContainer price={singleProduct.produit.price}/> 
+            <AddToCartContainer price={props.prix}/>
         </div>
     )
 }

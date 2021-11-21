@@ -8,7 +8,7 @@ import { CreerCodePromo } from '../../components/CreerCodePromo'
 
 export const PageCompte = ({ pageTitle }) => {
     const dataForm = {
-        sectionTitle: "Informations de compte",
+        sectionTitle: "Informations de pageCompte",
         formTitle: "Adresse de livraison",
 
     }
@@ -22,13 +22,13 @@ export const PageCompte = ({ pageTitle }) => {
             nomBoutique: {
                     inputId: "boutiqueName",
                     labelId: "boutiqueName",
-                    labelValue: "Nom de la boutique",
+                    labelValue: "Nom de la pageBoutique",
                     type: "text",
             },
             description: {
                     inputId: "descriptionBoutique",
                     labelId: "descriptionBoutique",
-                    labelValue: "description de la boutique",
+                    labelValue: "description de la pageBoutique",
                     type: "text",
             },
     }

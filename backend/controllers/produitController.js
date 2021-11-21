@@ -14,13 +14,11 @@ module.exports = {
        const id = req.params.id;
        const sql = `Call getProduit(?)`;
        genericGetDelete(sql, id, res, next);
-
     },
 
     readAllProduits: async (req, res, next) => {
         const sql = `Call selectProduits()`;
         genericSelect(sql, res, next)
-        console.log(res);
     },
 
     updateProduit : async (req, res, next) => {
