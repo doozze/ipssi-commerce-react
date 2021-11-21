@@ -15,6 +15,7 @@ import { PageCGUV } from "./page/pageCguv";
 import { Navigation } from "./components/Navigation";
 import './App.css';
 import {APIContextProvider} from "./contexts/APIContext";
+import {PaymentPage} from "./page/pagePaiement";
 
 function App() {
   return (
@@ -99,7 +100,17 @@ function App() {
                 </footer>
               </div>
             }/>
-
+            <Route path='/paiement' element={
+              <div className="page">
+                <header>
+                  <Navigation/>
+                </header>
+                <PaymentPage pageTitle="Procédez à votre paiement"/>
+                <footer>
+                  <Navigation/>
+                </footer>
+              </div>
+            }/>
 
           </Routes>
         </Router>
