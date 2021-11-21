@@ -3,7 +3,7 @@ import { ImageProduct } from '../ImageProduct'
 import { ShortInfosModule } from '../ShortInfosProduct'
 
 export const VignetteProduct = (props) => {
-    
+
     return (
         <div className="vignette">
             <a href="">

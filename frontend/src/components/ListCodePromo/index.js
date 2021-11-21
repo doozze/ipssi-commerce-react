@@ -4,7 +4,7 @@ import {useState} from "react";
 import {H2Title} from "../h2Title";
 import {H3Title} from "../h3Title";
 
-export const ListCodePromo= ({props}) => {
+export const ListCodePromo= (props) => {
 
     const [dataCode] = useState(props.dataPromoCode);
 
@@ -21,8 +21,8 @@ export const ListCodePromo= ({props}) => {
             </thead>
             <tbody>
             {dataCode.map((codePromo)=> (
-                <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.pourcentageReduction} nomCodeId={}
-                reductionCodeId={}/>
+                <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.pourcentageReduction} nomCodeId="a"
+                reductionCodeId="a"/>
             ))}
             </tbody>
         </table>
