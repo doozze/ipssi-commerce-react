@@ -2,10 +2,6 @@ import './index.css'
 
 export const Navigation = ( ) => {
 
-    /*
-    handleClickProduit(() => {
-
-    })*/
 
     return(
         <nav>

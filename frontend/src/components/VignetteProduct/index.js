@@ -10,7 +10,7 @@ export const VignetteProduct = (props) => {
             <a href="">
                 <ImageProduct src={props.urlImage} productName={props.productName}/>
                 <ShortInfosModule productName={props.productName} vendor={props.vendor} price={props.price}/>
-                <Button value="Voir le produit"/>
+                <Button key={props.key} value="Voir le produit" position="boutique"/>
             </a>
         </div>
     )
