@@ -7,7 +7,11 @@ import {H3Title} from "../h3Title";
 export const ListCodePromo= (props) => {
 
     const [dataCode] = useState(props.dataPromoCode);
-
+    const codePromo = {
+        code: "ipssi2021",
+        reduction: "25",
+    }
+    
     return (
         <div className="ListCodePromo">
             <H2Title className="titleListCode" content="Codes Promo"/>
