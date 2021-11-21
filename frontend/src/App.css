@@ -20,3 +20,15 @@ form label{
     padding: 0;
     margin: 0.5em 0 0 0;
 }
+table, td, tr, th{
+    border: none;
+}
+table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+tr:nth-child(1n+2){
+    background-color: #AAB7EB;
+
+}

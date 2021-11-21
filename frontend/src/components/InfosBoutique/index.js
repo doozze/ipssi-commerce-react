@@ -7,14 +7,15 @@ import { Button } from '../Button'
 // Ajouter la checkbox
 
 export const InfosBoutique = ({ boutique }) => {
+
     return (
         <section className="infosBoutique"> 
 
             <H3Title content={boutique.formTitle}/>
 
             <form className="infosClient">
-                <InputForm props={ boutique.nomBoutique }/>
-                <TextForm props={ boutique.description }/>
+                <InputForm content={ boutique.nomBoutique }/>
+                <TextForm content={ boutique.description }/>
 
                 <Button value="modifier"/>
                 
