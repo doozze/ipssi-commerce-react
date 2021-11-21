@@ -8,6 +8,7 @@ const useAPIContext = () => useContext(APIContext);
 const APIContextProvider = ({children})=> {
     const[products, setProducts] = useState([]);
     const[product, setProduct] = useState();
+    const[idProduit, setidProduit] = useState("1");
 
     const[codes, setCodes] = useState([]);
 
@@ -28,19 +29,22 @@ const APIContextProvider = ({children})=> {
         getProducts();
     }, [])
 
+    const constructUrl = (value) => '/produits/${value}';
+
     // fiche product
-    const getProduct = async () => {
+    const getProduct = async(idProduit) => {
         try {
-                const {data} = await axios.get('/produits/2');
-                setProduct(data.success[0]);
-            } catch (error) {
+            const {data} = await axios.get('/produits/2');
+            setProduct(data.success[0]);
+            console.log(data.success[0]);
+        } catch (error) {
                 console.log(error.message);
             }
         }
 
     useEffect(()=> {
         getProduct()
-    },[]);
+    },[idProduit]);
 
     // listCodePromos
     const getCodePromos = async () => {
@@ -70,8 +74,7 @@ const APIContextProvider = ({children})=> {
         getClient()
     }, [])
 
-
-    return <APIContext.Provider value={{products, product, codes, client}}>{children}</APIContext.Provider>
+    return <APIContext.Provider value={{products, product, codes, client, idProduit, setidProduit }}>{children}</APIContext.Provider>
 }
 
 export {APIContextProvider, useAPIContext}

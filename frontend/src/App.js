@@ -78,7 +78,7 @@ function App() {
                 </footer>
               </div>
             }/>
-            <Route path='/produit' element={
+            <Route path='/produit/:id' element={
               <div className="page">
                 <header>
                   <Navigation/>

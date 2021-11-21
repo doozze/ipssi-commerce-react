@@ -6,20 +6,6 @@ import { H2Title } from '../../components/h2Title'
 
 export const PageProduit = () => {
 
-    /*
-        const singleProduct = {
-            produit: {
-                photo: "www.test.fr",
-                nom_produit: "Name Test",
-                prix: "12",
-                description: "Lorem description pageProduit ipsum dolor sic amet",
-            },
-            vendor: {
-                title: "La Boutique du Vendeur",
-                textValue: "Lorem description pageBoutique",
-            }
-        };*/
-
     // To do loop on avis
     const avisContent = {
         title: "supr cool",

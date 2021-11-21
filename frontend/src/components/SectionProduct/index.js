@@ -12,7 +12,6 @@ export const SectionProduct = ({singleProduct}) => {
 
     useEffect(()=> {},[product]);
 
-    console.log("render section produit")
     return (
         <section className="sectionProduct">
             {
