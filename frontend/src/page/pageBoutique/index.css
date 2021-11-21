@@ -1,0 +1,8 @@
+#productContainer {
+    display: flex;
+    margin: 5%;
+}
+
+#vignetteProduct{
+    margin: 50px;
+}

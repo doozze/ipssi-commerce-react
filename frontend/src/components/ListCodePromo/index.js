@@ -1,12 +1,15 @@
 import './index.css'
 import {LigneCodePromo} from "../LigneCodePromo";
-import {useState} from "react";
 import {H2Title} from "../h2Title";
 import {H3Title} from "../h3Title";
+import {useAPIContext} from "../../contexts/APIContext";
+import {useEffect} from "react";
 
 export const ListCodePromo= (props) => {
 
-    const [dataCode] = useState(props.dataPromoCode);
+    const {codes, setCodes} = useAPIContext();
+
+    useEffect(()=> {},[codes]);
 
     return (
         <div className="ListCodePromo">
@@ -20,7 +23,7 @@ export const ListCodePromo= (props) => {
                 </tr>
             </thead>
             <tbody>
-            {dataCode.map((codePromo)=> (
+            {codes && codes.map((codePromo)=> (
                 <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.pourcentageReduction} nomCodeId="a"
                 reductionCodeId="a"/>
             ))}
