@@ -7,6 +7,7 @@ import { ListCodePromo } from '../../components/ListCodePromo'
 import { CreerCodePromo } from '../../components/CreerCodePromo'
 
 export const PageCompte = ({ pageTitle }) => {
+
     const dataForm = {
         sectionTitle: "Informations de pageCompte",
         formTitle: "Adresse de livraison",

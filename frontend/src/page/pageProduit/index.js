@@ -1,5 +1,5 @@
 import './index.css'
-import { SectionProduct } from '../../components/sectionProduct'
+import { SectionProduct } from '../../components/SectionProduct'
 import { AvisC } from '../../components/avisContainer'
 import { H2Title } from '../../components/h2Title'
 

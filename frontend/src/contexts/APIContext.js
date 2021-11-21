@@ -18,7 +18,7 @@ const APIContextProvider = ({children})=> {
         try {
             const {data} = await axios.get('/produits');
             setProducts(data.success[0]);
-            console.log(data.success[0])
+            console.log(data.success[0]);
         } catch (error) {
             console.log(error.message);
         }
@@ -26,7 +26,6 @@ const APIContextProvider = ({children})=> {
 
     useEffect(()=> {
         getProducts();
-        //console.log("getproducts")
     }, [])
 
     // fiche product
@@ -34,7 +33,6 @@ const APIContextProvider = ({children})=> {
         try {
                 const {data} = await axios.get('/produits/2');
                 setProduct(data.success[0]);
-                console.log(data.success[0])
             } catch (error) {
                 console.log(error.message);
             }
@@ -49,7 +47,6 @@ const APIContextProvider = ({children})=> {
         try{
             const {data} = await axios.get('/promoCodes');
             setCodes(data.success[0]);
-            console.log(data.success[0])
         } catch (error) {
             console.log(error.message);
         }
@@ -59,25 +56,22 @@ const APIContextProvider = ({children})=> {
         getCodePromos()
     }, []);
 
-/*
-    // pageConnexion
-    const connect = async() => {
-        try {
-            const {data} = await axios.post('/clients/connexion', {}); // recup login/mdp
-            if(data.success[0] != null) {
-                setClient(data.success[0])
-            } else {
-                // => pageConnexion impossible textContainer
-            }
-        } catch(error) {
+   // client
+    const getClient = async () => {
+        try{
+            const {data} = await axios.get('/clients/1');
+            setClient(data.success[0]);
+        } catch (error) {
             console.log(error.message);
         }
     }
-*/
-    const connexion = {client, setClient};
+
+    useEffect(() => {
+        getClient()
+    }, [])
 
 
-    return <APIContext.Provider value={{products, product, codes, connexion}}>{children}</APIContext.Provider>
+    return <APIContext.Provider value={{products, product, codes, client}}>{children}</APIContext.Provider>
 }
 
 export {APIContextProvider, useAPIContext}

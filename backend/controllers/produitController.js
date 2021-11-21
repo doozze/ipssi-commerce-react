@@ -17,7 +17,7 @@ module.exports = {
     },
 
     readAllProducts: async (req, res, next) => {
-        const sql = `Call selectPromoCode()`;
+        const sql = `Call selectProduits()`;
         genericSelect(sql, res, next)
     },
 
