@@ -3,12 +3,17 @@ import {LigneCodePromo} from "../LigneCodePromo";
 import {H2Title} from "../h2Title";
 import {H3Title} from "../h3Title";
 import {useAPIContext} from "../../contexts/APIContext";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const ListCodePromo= (props) => {
 
-    const {codes, setCodes} = useAPIContext();
+    const [dataCode] = useState(props.dataPromoCode);
+    const codePromo = {
+        code: "ipssi2021",
+        reduction: "25",
+    }
 
+    const {codes, setCodes} = useAPIContext();
     useEffect(()=> {},[codes]);
 
     return (

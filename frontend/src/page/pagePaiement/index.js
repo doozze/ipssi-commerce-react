@@ -10,10 +10,8 @@ export const PaymentPage = ({ pageTitle }) => {
     return(
         <section className="pageConnexion">
             <H1Title content="Paiement"/>
-            <div className="formContainer">
-                <div><DataClientForm/></div>
-                <div><PaymentBox/></div>
-            </div>
+            <DataClientForm/>
+            <PaymentBox/>
         </section>
         
     )   
