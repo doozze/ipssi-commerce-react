@@ -8,12 +8,11 @@ export const ProductInfosContainer = (props) => {
 
     //<TextInfos content={singleProduct.vendor.title} textValue={singleProduct.vendor.description}/>
 
-
     return (
         <div className="productInfosContainer">
-            <TextInfos content={props.prix} textValue={props.description}/>
+            <TextInfos content={props.price} textValue={props.desc}/>
             <Button value="Contacter le vendeur"/>
-            <AddToCartContainer price={props.prix}/>
+            <AddToCartContainer price={props.price}/>
         </div>
     )
 }
