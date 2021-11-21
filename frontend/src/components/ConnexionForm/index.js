@@ -15,7 +15,7 @@ export const ConnexionForm = (props) => {
     if (props.typeForm === "Se Connecter"){
         checkbox = ""
     }else{
-        checkbox = <div><input type="checkbox" id="beVendor"/><label for="beVendor">Devenir Vendeur</label></div>
+        checkbox = <div className="checkbox"><input type="checkbox" id="beVendor"/><label for="beVendor">Devenir Vendeur</label></div>
     }
 
     const handleSubmit = () => {

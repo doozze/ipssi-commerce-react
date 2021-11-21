@@ -5,6 +5,8 @@ header nav, nav ul{
 }
 nav img{
     display: block;
+    max-height: 60px;
+
 }
 nav ul{
     list-style-type: none;
@@ -19,6 +21,7 @@ nav li a{
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
 }
+
 nav li a:hover{
     border-bottom: 2px solid #4570EB;
     transition: all 0.2s ease;
@@ -26,11 +29,7 @@ nav li a:hover{
 footer{
     margin-top: 3em;
 }
-footer ul{
-    width: 80%;
-}
 footer img{
     margin: auto;
     display: block;
-    width: 10%;
 }

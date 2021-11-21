@@ -1,3 +1,16 @@
-input {
-    width: 200px;
+.cropImage{
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    position: relative;
+}
+.cropImage img{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }

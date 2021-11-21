@@ -1,0 +1,11 @@
+.productBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.productBody div{
+    width: 50%;
+}
+.productBody .cropImage{
+    height: 350px;
+}
