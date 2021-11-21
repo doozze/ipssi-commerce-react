@@ -4,11 +4,7 @@ import { DataClientForm } from '../../components/DataClient'
 import { Commande } from '../../components/commande'
 import { InfosBoutique } from '../../components/InfosBoutique'
 import { ListCodePromo } from '../../components/ListCodePromo'
-<<<<<<< HEAD:frontend/src/page/compte/index.js
-import { CreerCodePromo } from '../../components/ListCodePromo'
-=======
 import { CreerCodePromo } from '../../components/CreerCodePromo'
->>>>>>> dbb0ff54fe5d6931d3ffb58f75224a3254a6193c:frontend/src/page/pageCompte/index.js
 
 export const PageCompte = ({ pageTitle }) => {
     const dataForm = {

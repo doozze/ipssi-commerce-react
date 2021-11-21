@@ -1,0 +1,12 @@
+.formContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formContainer .dataClient{
+    width: 48%;
+}
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+}

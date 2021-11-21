@@ -1,0 +1,21 @@
+.vignetteContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.vignette{
+    width: 30%;
+    text-align: center;
+    margin: 2%;
+}
+.vignette a{
+    text-decoration: none;
+    color: #1a1a1a;
+}
+.vignette p, .vignette h3, .vignette h2{
+    margin: 0.2em 0 0 0;
+}
+.vignette input[type="button"]{
+    margin: 0.5em auto;
+
+}
