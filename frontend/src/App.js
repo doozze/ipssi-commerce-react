@@ -18,6 +18,7 @@ import {APIContextProvider} from "./contexts/APIContext";
 import {PaymentPage} from "./page/pagePaiement";
 
 function App() {
+  // Commentaire
   return (
       <APIContextProvider>
         <Router>
