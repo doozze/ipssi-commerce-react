@@ -1,3 +1,24 @@
-input {
-    width: 200px;
+input[type="button"]{
+    -webkit-width: fit-content;
+    -moz-width: fit-content;
+    -ms-width: fit-content;
+    -o-width: fit-content;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: #4570EB;
+    border: 2px solid transparent;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    margin: 1em 0.5em 0 0;
+
+}
+input[type="button"]:hover{
+    background-color: transparent;
+    border-color: #4570EB;
+    color: #4570EB;
+    transition: all 0.2s ease;
 }

@@ -6,7 +6,7 @@ export const Navigation = ( ) => {
         <nav>
             <img src="" alt="logo"/>
             <ul>
-                <li><a href="http://localhost:3000/boutique">Boutique</a></li>
+                <li><a href="http://localhost:3000/">Boutique</a></li>
                 <li><a href="http://localhost:3000/produit">Fiche produit</a></li>
                 <li><a href="http://localhost:3000/compte">Compte</a></li>
                 <li><a href="http://localhost:3000/cguv">CGUV</a></li>

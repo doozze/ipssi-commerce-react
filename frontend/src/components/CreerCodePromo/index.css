@@ -1,4 +1,3 @@
-.FormCodePromo div{
-    float: left;
-    clear: none;
+.FormCodePromo{
+    display: flex;;
 }

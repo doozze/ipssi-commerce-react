@@ -14,6 +14,14 @@ nav li{
 }
 nav li a{
     text-decoration: none;
+    color: #4570EB;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+nav li a:hover{
+    border-bottom: 2px solid #4570EB;
+    transition: all 0.2s ease;
 }
 footer{
     margin-top: 3em;

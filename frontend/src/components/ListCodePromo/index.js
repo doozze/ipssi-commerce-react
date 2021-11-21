@@ -1,13 +1,17 @@
 import './index.css'
 import {LigneCodePromo} from "../LigneCodePromo";
-import {useState} from "react";
+// import {useState} from "react";
 import {H2Title} from "../h2Title";
 import {H3Title} from "../h3Title";
 
 export const ListCodePromo= ({props}) => {
 
-    const [dataCode] = useState(props.dataPromoCode);
-
+    //const [dataCode] = useState(props.dataPromoCode);
+    const codePromo = {
+        code: "ipssi2021",
+        reduction: "25",
+    }
+    
     return (
         <div className="ListCodePromo">
             <H2Title className="titleListCode" content="Codes Promo"/>
@@ -20,10 +24,10 @@ export const ListCodePromo= ({props}) => {
                 </tr>
             </thead>
             <tbody>
-            {dataCode.map((codePromo)=> (
-                <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.pourcentageReduction} nomCodeId={}
-                reductionCodeId={}/>
-            ))}
+{/*             {dataCode.map((codePromo)=> (
+                <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.reduction} nomCodeId=""/>
+            ))} */}
+            <LigneCodePromo nomCode={codePromo.code} reductionCode={codePromo.reduction} />
             </tbody>
         </table>
     </div>)
