@@ -10,13 +10,12 @@ export const PageBoutique = ({ productList }) => {
 
     useEffect(()=> {},[products])
 
-    console.log("render boutique")
     return(
         <section className="PageBoutique">
             <H1Title content={productList}/>
-            <div className="vignetteContainer">
+            <div className="vignetteContainer" id="productContainer">
                 {
-                    products && products.map(prod =>  <VignetteProduct urlImage={prod.photo} productName={prod.nom_produit} vendor={prod.id_vendeur} price={prod.prix}/> )
+                    products && products.map(prod => <VignetteProduct id="vignetteProduct" urlImage={prod.photo} productName={prod.nom_produit} vendor={prod.id_vendeur} price={prod.prix}/> )
                 }
             </div>
         </section>

@@ -1,14 +1,14 @@
 const router = require('express-promise-router')();
 
-const {createProduit, readProduit, readAllProduits, updateProduit, deleteProduit} = require('../controllers/produitController');
+const {createProduct, readProduct, readAllProducts, updateProduct, deleteProduct} = require('../controllers/produitController');
 
 router.route('/')
-    .post(createProduit)
-    .get(readAllProduits);
+    .post(createProduct)
+    .get(readAllProducts);
 
 router.route('/:id')
-    .get(readProduit)
-    .put(updateProduit)
-    .delete(deleteProduit);
+    .get(readProduct)
+    .put(updateProduct)
+    .delete(deleteProduct);
 
 module.exports = router;

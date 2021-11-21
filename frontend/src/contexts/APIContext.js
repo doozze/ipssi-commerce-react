@@ -8,6 +8,9 @@ const useAPIContext = () => useContext(APIContext);
 const APIContextProvider = ({children})=> {
     const[products, setProducts] = useState([]);
     const[product, setProduct] = useState();
+
+    const[codes, setCodes] = useState([]);
+
     const[client, setClient] = useState();
 
     // products
@@ -26,7 +29,7 @@ const APIContextProvider = ({children})=> {
         //console.log("getproducts")
     }, [])
 
-
+    // fiche product
     const getProduct = async () => {
         try {
                 const {data} = await axios.get('/produits/2');
@@ -39,10 +42,22 @@ const APIContextProvider = ({children})=> {
 
     useEffect(()=> {
         getProduct()
-        console.log("getProduct")
     },[]);
 
+    // listCodePromos
+    const getCodePromos = async () => {
+        try{
+            const {data} = await axios.get('/promoCodes');
+            setCodes(data.success[0]);
+            console.log(data.success[0])
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
 
+    useEffect(() => {
+        getCodePromos()
+    }, []);
 
 /*
     // pageConnexion
@@ -62,7 +77,7 @@ const APIContextProvider = ({children})=> {
     const connexion = {client, setClient};
 
 
-    return <APIContext.Provider value={{products, product, connexion}}>{children}</APIContext.Provider>
+    return <APIContext.Provider value={{products, product, codes, connexion}}>{children}</APIContext.Provider>
 }
 
 export {APIContextProvider, useAPIContext}

@@ -11,17 +11,21 @@ app.use(express.json());
 
 
 const clientsRoute = require('./routes/clientsRoute');
-const commandesRoute =  require('./routes/commandesRoute');
-const produitsRoute = require('./routes/produitsRoute');
-const vendeursRoute =  require('./routes/vendeursRoute');
-const addressesRoute =  require('./routes/addressesRoute');
-const livraisonRoute = require('./routes/livraisonsRoute');
+const commandsRoute = require('./routes/commandesRoute');
+const productsRoute = require('./routes/produitsRoute');
+const vendorsRoute =  require('./routes/vendeursRoute');
+const addressRoute =  require('./routes/addressesRoute');
+const codesPromoRoute = require('./routes/codesPromoRoute');
+//const deliveryRoute = require('./routes/livraisonsRoute');
 
 app.use('/api/clients', clientsRoute);
-app.use('/api/addresses', addressesRoute);
-app.use('/api/commandes', commandesRoute);
-app.use('/api/produits', produitsRoute);
-app.use('/api/vendeurs', vendeursRoute);
+app.use('/api/addresses', addressRoute);
+app.use('/api/commandes', commandsRoute);
+app.use('/api/produits', productsRoute);
+app.use('/api/vendeurs', vendorsRoute);
+//app.use('/api/delivery', deliveryRoute);
+app.use('/api/promoCodes', codesPromoRoute);
+
 
 app.get('/api/version', (_, res) => res.send("Hello from API v1"));
 
