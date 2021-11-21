@@ -3,11 +3,11 @@ import usePop from "./usePopup";
 import PopUp from "./popup";
 
 export default function Pop() {
-  const { isShowing: isPaymentFormShowed, toggle: togglePaymentForm } = usePopUp();
+  const { isShowing: isPaymentFormShowed, toggle: togglePaymentForm } = usePop();
   const {
     isShowing: isAvisFormShowed,
     toggle: toggleAvisForm
-  } = usePopup();
+  } = usePop();
 
   return (
     <>
