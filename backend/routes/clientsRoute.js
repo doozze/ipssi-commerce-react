@@ -10,7 +10,7 @@ router.route('/:id')
    .delete(deleteClient)
    .put(updateClient);
 
-router.route('/connexion')
+router.route('/pageConnexion')
     .post(clientConnexion);
 
 module.exports = router;
