@@ -3,7 +3,7 @@ import { H1Title } from '../../components/h1Title'
 import { DataClientForm } from '../../components/DataClient'
 import { Commande } from '../../components/commande'
 import { InfosBoutique } from '../../components/InfosBoutique'
-import { ListCodePromo } from '../../components/LigneCodePromo'
+import { ListCodePromo } from '../../components/ListCodePromo'
 import { CreerCodePromo } from '../../components/ListCodePromo'
 
 export const PageCompte = ({ pageTitle }) => {
